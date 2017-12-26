@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.coinmarketcap.com/v1/ticker/?limit=10
+    uri: https://api.coinmarketcap.com/v1/ticker?start=0&limit=10
     body:
       encoding: US-ASCII
       string: ''
@@ -104,6 +104,6 @@ http_interactions:
         \"98426973.0\", \n        \"percent_change_1h\": \"0.18\", \n        \"percent_change_24h\":
         \"8.63\", \n        \"percent_change_7d\": \"-11.75\", \n        \"last_updated\":
         \"1497641677\"\n    }\n]"
-    http_version: 
+    http_version:
   recorded_at: Fri, 16 Jun 2017 19:37:32 GMT
 recorded_with: VCR 3.0.3

@@ -4,11 +4,11 @@ require 'httparty'
 require 'nokogiri'
 
 module Coinmarketcap
-  def self.coins(limit = nil)
+  def self.coins(limit = nil, start = 0)
     if limit.nil?
-      HTTParty.get('https://api.coinmarketcap.com/v1/ticker/')
+      HTTParty.get("https://api.coinmarketcap.com/v1/ticker?start=#{start}")
     else
-      HTTParty.get("https://api.coinmarketcap.com/v1/ticker/?limit=#{limit}")
+      HTTParty.get("https://api.coinmarketcap.com/v1/ticker?start=#{start}&limit=#{limit}")
     end
   end
 
